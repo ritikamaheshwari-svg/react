@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+    <script src="reatc-basics.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      // const element = <button onClick={() => alert('Hello, world!')}>Hello, button!</button>;
+      // const element2 = <p>Hello, paragraph!</p>;
+
+
+      const price = 10;
+      const item = "CHOCOLATE";
+      const element3 = <p>{item}: ${price.toFixed(2)}</p>;
+      const qty = <input type="number" placeholder="Quantity"></input>;
+      const total = price * qty;
+      const button = <button onClick={() => alert(`Total: ${total}`)}>Calculate Total</button>;
+      const div = (<div>
+        
+        {item} <br/>
+        {price} <br/>
+        {qty} <br/>
+        {button} <br/>
+        {total}
+      </div>);
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>     
