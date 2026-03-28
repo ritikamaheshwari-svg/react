@@ -184,7 +184,7 @@ export function HomePage() {
           </button>
         </div>
       </div>
-        </div>
+    </div>
     </>
     );
 }
